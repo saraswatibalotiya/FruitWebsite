@@ -13,6 +13,18 @@ var flash = require('express-flash')
 var validator = require('express-validator')
 const MongoStore = require('connect-mongo')(session);
 var moment = require('moment');
+const dotenv = require("dotenv");
+const crypto = require("crypto");
+const Razorpay = require("razorpay");
+const cors = require("cors");
+dotenv.config();
+
+const instance = new Razorpay({
+    key_id: process.env.KEY_ID,
+    key_secret: process.env.KEY_SECRET,
+  });
+
+
 
 var cartroutes = require('../routes/cart');
 var userRoutes = require('../routes/user');
@@ -22,7 +34,7 @@ var userRoutes = require('../routes/user');
 const app = express();//app k andar sab express k methods aa jayege
 const port = process.env.PORT || 3000;//give port no to server
 
-
+app.use(cors());
 
 //mogosee connection ---------------
 require("./db/conn");//to make connection in mongodb
@@ -53,7 +65,7 @@ const partialpath = path.join(__dirname, "../templates/partials");
 
 
 
-mongoose.connect('mongodb://localhost:27017/fashionfeet');
+mongoose.connect('mongodb://localhost:27017/saifruit');
 
 
 //shall be in sequence -------------------------------------------
@@ -128,6 +140,26 @@ hbs.registerHelper('if_equal', function(a, b, opts) {
     }
 })
 
+hbs.registerHelper("ifSet", function (model) {
+    var count = 0;
+    while (count < model.length) {
+        if (count == 1){
+            break
+    }
+}
+    return;
+});  
+
+hbs.registerHelper('each_upto', function(ary, max, options) {
+    if(!ary || ary.length == 0)
+        return options.inverse(this);
+
+    var result = [ ];
+    for(var i = 0; i < max && i < ary.length; ++i)
+        result.push(options.fn(ary[i]));
+    return result.join('');
+});
+
 hbs.registerHelper('selected', function(option, value){
     if (option === value) {
         return ' selected';
@@ -139,6 +171,18 @@ hbs.registerHelper('selected', function(option, value){
 
 app.use('/', cartroutes);
 
+// app.post("/api/orders", (req, res) => {
+//     params = req.body;
+//     instance.orders
+//       .create(params)
+//       .then((data) => {
+//         res.send({ sub: data, status: "success" });
+//       })
+//       .catch((error) => {
+//         res.send({ sub: error, status: "failed" });
+//       });
+//   });
+  
 
 
 

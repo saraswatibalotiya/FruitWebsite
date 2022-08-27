@@ -46,7 +46,7 @@
   <!-- Style css -->
   <link rel="stylesheet" href="css/style1.css">
 
-  <title>Fashion Feet</title>
+  <title>Sai Fruits</title>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
@@ -102,151 +102,38 @@
 
 
   <!-- Home section / Slider -->
-  <section id="home" class="home pt-5 overflow hidden">
-
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
+  {{!-- <section id="home" class="home pt-5 overflow hidden">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/grid_4.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption  d-block">
+          <div class="bg-image">
+            <img src="images/slide1.jpg" class="d-block w-75 position-absolute top-50 start-50 translate-middle"
+              alt="...">
+          </div>
 
-            <h3>Afordable price with good product</h3>
-            <a href="/product" class="btn btn-danger text-uppercase mt-4">Order Now</a>
-
-          </div>
         </div>
-        <div class="carousel-item">
-          <img src="images/slide5.jpg" class="d-block w-100" alt="">
-          <div class="carousel-caption d-none d-sm-block">
-            <div class="home-text">
-              {{!-- <h2>Shop By Category</h2>
-              <a href="/product" class="btn btn-danger text-uppercase mt-4">SHOP</a> --}}
-            </div>
-          </div>
-        </div>
-        {{!-- <div class="carousel-item">
-          <img src="images/slide6.jpg " class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block slide3">
-            <a href="#product" class="btn btn-danger text-uppercase mt-4">Order Now</a>
-            <h3>Stylish Sneaker For A Stylish Start</h3>
-          </div>
-        </div> --}}
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </section>
 
+  </section> --}}
 
-  <!-- Men Women Card -->
-  <!-- Products -->
-
-  {{!-- shop images --}}
-  <section class="shop  pt-5" id="shop">
-    <div class="container mt-2">
-      <div class="card  heading">
-        <div class="card-body text-center">
-          <h3 id="new" class="text-center ">OUR PRODUCTS</h3>
-        </div>
-      </div>
-      <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
-        <div class="col">
-          <div class="card shadow">
-            <img src="images/cat1.jpg" class="card-img-top" alt="Shop for Men">
-            <div class="card-img-overlay">
-              <h5 class="card-title text-center pt-20">
-                <a href="/product?selectpicker=men" class="btn btn-danger text-uppercase mt-15 text-center">Shop For
-                  Men</a>
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow">
-            <img src="images/grid_1.jpg" class="card-img-top" alt="Shop for Women">
-            <div class="card-img-overlay">
-              <h5 class="card-title text-center pt-20">
-                <a href="/product?selectpicker=women" class="btn btn-danger text-uppercase mt-15 text-center">Shop For
-                  Women</a>
-              </h5>
-            </div>
-
+  <!-- Banner section -->
+  <section id="home" class="banner_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center text-md-start textf">
+          {{!-- <h1>Calm Your Soul with Fruits</h1> --}}
+          {{!-- <h1>I’m Joe Biden<br><span>JS Developer.</span><br>based in USA.</h1>
+          <div class="mt-4">
+            <a class="main-btn" href="resume/resume.docx">Download CV</a> --}}
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- Banner section exit -->
 
-  <!-- Sub - Category -->
-
-  <section class="product2 pt-5">
-    <div class="container mt-4">
-
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-          <div class="card h-100 shadow">
-            <div class="zoom">
-              <img src="images/heels2.jpg" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title text-center">Heels</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 shadow">
-            <div class="zoom">
-              <img src="images/Shoes.jpg" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title text-center">Shoes</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 shadow">
-            <div class="zoom">
-              <img src="images/sandal2.jpg" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title text-center">Sandals</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col ">
-          <div class="card h-100 shadow">
-            <div class="zoom">
-              <img src="images/sneakers1.jpg" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title text-center">Sneakers</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Brands -->
-
-  <section class="brands">
+  {{!-- <section class="brands">
     <div class="container pt-5 ">
       <div class="card  heading">
         <div class="card-body text-center">
@@ -282,106 +169,95 @@
       </div>
 
     </div>
-  </section>
+  </section> --}}
 
-  <!-- Features -->
-  <section class="features mt-4">
-    <div class="container mt-5 text-center">
-      <div class="row row-cols-1 row-cols-md-3 g-3">
-        <div class="col-sm-6">
-          <div class="card mt-5 btn btn-danger text-uppercase">
-            <div class="card-body">
-              <h5 class="card-title text-center">
-                <span><i class="fas fa-rupee-sign"></i></span>
-              </h5>
-              <p class="card-text">Cash On Delivery</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card mt-5 btn btn-danger text-uppercase">
-            <div class="card-body ">
-              <h5 class="card-title text-center">
-                <span><i class="fas fa-shipping-fast"></i></span>
-              </h5>
-              <p class="card-text">Free Shipping </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card mt-5 btn btn-danger text-uppercase ">
-            <div class="card-body  ">
-              <h5 class="card-title text-center">
-                <span><i class="bi bi-patch-check-fill"></i></span>
-              </h5>
-              <p class="card-text">Authenticate Products</p>
-            </div>
-          </div>
+  <!-- Services section -->
+  <section id="services" class="services">
+    <div class="container mt-3">
+      <div class="card  heading ">
+        <div class="card-body text-center ">
+          <h3 id="new" class="text-center text-light mt-4">Offerings</h3>
         </div>
       </div>
+      <div class="row services_wrapper">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-md-start text-center rounded-circle">
+              <h3 class="text-center">
+                <span><i class="fas fa-rupee-sign rounded-circle text-danger text-center"></i></span>
+              </h3>
+              <h3 class="text-light text-center">Affordable Prices</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-md-start text-center rounded-circle">
+              <h3 class="text-center">
+                <span><i class="fas fa-shipping-fast rounded-circle text-danger text-center"></i></span>
+              </h3>
+              <h3 class="text-light text-center">Free Shipping</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-md-start text-center rounded-circle">
+              <h3 class="text-center">
+                <span><i class="bi bi-patch-check-fill rounded-circle text-danger text-center"></i></span>
+              </h3>
+              <h3 class="text-light text-center">Fresh Products</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
     </div>
   </section>
+  <!-- Services section exit -->
 
+ 
 
   {{!-- About us --}}
   <section id="about" class="about">
     <div class="container pt-5">
       <div class="card  heading ">
         <div class="card-body text-center">
-          <h3 id="new" class="text-center mt-4">About Us</h3>
+          <h3 id="new" class="text-center text-light mt-4">About Us</h3>
         </div>
       </div>
       <div class="card card-text  mt-4 shadow">
-        <div class="card-body mb-4">
-          <h4 class="card-title text-center mt-3 mb-3">Fashion Feet – Footwear for Everyone</h4>
-          <p class="  d-block justify-content mb-3 mt-4">
-            For each one of those shoe sweethearts out there, Fashion Feet , offer the one-stop goal to pick
-            the correct
-            match of footwear.Fashion Feet is an Organization situated at Shell Clony , Chembur ,Mumbai
-            -400071.We
-            believe that, to become a fashion icon, a personalized style is a must. What else could be the
-            best platform
-            than online fashion store? This idea began when a group of people came together to create a
-            platform for the
-            fashion addicts. This is a destination for fashionable people as we believe that <i>“don't just
-              be
-              Stylish,but Be Smart, and buy SMART”.</i>
+        <div class="card-body mb-4 text-light">
+          {{!-- <h4 class="card-title text-center mt-3 mb-3">About Us</h4> --}}
+          <p class="  d-block justify-content mb-3 mt-4 text-light">
+            Welcome to Sai Fruits , your number one source for all fruits . We work to deliver the
+            world’s freshest, choicest, and juiciest product to discerning customers , with a focus on
+            quality and affordable prices . Sai Fruits can offer you the fresh fruits and vegetables .
+            We now serve customers all over Nashik, and are thrilled that we're able to turn our passion
+            into our own website . We hope you enjoy our products as much as we enjoy offerinng them to
+            you. If you have any question or comments , please don't hesitate to contact us.
           </p>
-          <h5 class="card-title mt-4 mb-3 text-center ">Leading Shoe Brands at One Place</h5>
-          <p class=" mt-2 d-block justify-content mb-3 mt-4">
-            Along with huge collection, Fashion Feet creates style along the lines of themes and cult
-            classic fashion.
-            The refreshing collection includes big brands such as Puma,Rebook,Adidas,Nike,Etnies among
-            others
-            <em><span>Since
-                2000</span></em>. Devoted to satisfying your shopping wants with no inconvenience, we
-            ensure that you
-            encounter
-            smooth web based requesting background. Our intriguing accumulation of elegantly insightful
-            footwear is
-            accessible at astonishing costs that will really shock you. So be a shoe-holic with Fashion
-            Feet.
-          </p>
+          <p> - SAI Fruits</p>
         </div>
       </div>
     </div>
   </section>
 
   {{!-- Contact Us --}}
-  <section id="contact" class="contact ">
+  <section id="contact" class="contact contact_wrapper">
     <div class="container pt-5">
-
-
       <div class="card  heading ">
         <div class="card-body text-center ">
-          <h3 id="new" class="text-center heading-text mt-4">Contact Us</h3>
+          <h3 id="new" class="text-center heading-text mt-4 text-light">Contact Us</h3>
         </div>
       </div>
-      <div class="card contact-color shadow">
+      <div class="card contact-color shadow contact-bg">
         <div class=" card-body mt-3 ">
           <div class="container">
             <div class="row text-center">
-              <div class="col-12">
+              <div class="col-12 text-light">
                 We are always here to help .If you have requirement/queries about our services , fill up
                 the contact
                 form
@@ -398,30 +274,32 @@
 
 
           <!-- contact form -->
-          <section class="form-section">
+          <section class="form-section contact_wrapper ">
             <div class="container">
 
-              <div class="row">
-                <div class="col-md-6">
+              <div class="row contact-bg">
+                <div class="col-md-6 ">
                   {{#if messages.error}}
-                    <div class="alert alert-light text-danger text-center">
-                        {{ messages.error }}
-                    </div>
-                    {{/if}}
-                    {{#if messages.success}}
-                    <div class="alert alert-success  text-center" id="alert">
-                        {{ messages.success }}
-                    </div>
-                    {{/if}}
-                  <form class="row g-3" action="/" method="POST">
+                  <div class="alert alert-light text-danger text-center">
+                    {{ messages.error }}
+                  </div>
+                  {{/if}}
+                  {{#if messages.success}}
+                  <div class="alert alert-success text-success bg-light text-center" id="alert">
+                    {{ messages.success }}
+                  </div>
+                  {{/if}}
+                  <form class="row g-3 text-dark" action="/" method="POST">
                     <div class="col-md-6">
                       <input type="text" class="form-control" id="inputName" placeholder="Enter Name" name="name">
                     </div>
                     <div class="col-md-6">
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Email Id" name="email">
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Email Id"
+                        name="email">
                     </div>
                     <div class="col-12">
-                      <input type="text" class="form-control" id="inputAddress" placeholder="Enter Your Address" name="address">
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Enter Your Address"
+                        name="address">
                     </div>
                     <div class="col-md-12">
                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
@@ -432,7 +310,7 @@
                     </div>
                   </form>
                 </div>
-                <div class="col-md-6 address text-center">
+                <div class="col-md-6 address text-center text-light">
                   <h5>Call Us / WhatsApp</h5>
                   <p><i class="fas fa-phone"></i> +(91) 9090909090
                   </p>
@@ -530,7 +408,10 @@
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
+
+  
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
 
@@ -540,6 +421,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
         crossorigin="anonymous"></script> -->
+    
 
 </body>
 

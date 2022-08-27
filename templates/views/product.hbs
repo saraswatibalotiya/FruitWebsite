@@ -24,27 +24,35 @@
     <div class="container mt-5">
       <form action="/product" id="product" method="get">
         <div id="styled-select">
-          <select class="form-select form-select-sm select-picker text-uppercase" aria-label=".form-select-sm example"
+          <select class="form-select form-select-sm select-picker text-uppercase text-light" aria-label=".form-select-sm example"
             {{!-- onclick="document.getElementById('product').submit()" --}}
             onchange='if(this.value != 0) { this.form.submit(); }' name="selectpicker">
 
-            <option selected>Search By Category</option>
-            <option id="product" name="women" class="all" value="all">all</option>
-            <option id="product" name="women" class="men" value="men">Mens</option>
-            <option id="product" name="women" class="women" value="women">Womens</option>
-            <option id="product" name="select" value="kids">Kids</option>
+            <option selected  >Search By Category</option>
+            <option id="product" name="women" class="all text-dark" value="all">all</option>
+            <option id="product" name="women" class="Fruits text-dark" value="Fruits">Fruits</option>
+            <option id="product" name="women" class="Vegetables text-dark" value="Vegetables">Vegetables</option>
+            <option id="product" name="sprouts" class="text-dark" value="sprouts">Freshly Cut & Sprouts</option>
+            <option id="product" name="seasonal" class="text-dark" value="seasonal">Seasonal</option>
+
           </select>
         </div>
         {{!-- <input type="submit" hidden /> --}}
       </form>
 
-      <div class="card  rborder">
+      <div class="card rborder heading">
         <div class="card-body text-center">
-          {{!-- {{#if products}} --}}
+          {{!-- {{#each products}} --}}
+          {{!-- {{#each_upto this 1}} --}}
+
           <h3 id="new" class="text-center heading-text text-uppercase ">
-            {{ products.category }} PRODUCTS
+            {{ this.category }} PRODUCTS
+            {{!-- {{ifSet products}} --}}
           </h3>
-          {{!-- {{/if}} --}}
+          {{!-- {{/each_upto}} --}}
+          {{!-- {{/each}} --}}
+
+          
         </div>
       </div>
 
@@ -59,7 +67,7 @@
             <div class="card-body shop-item-details">
 
               <h6 class="card-title shop-item-title">{{this.name}}</h6>
-              <h5 class="text-center price shop-item-price text-danger">₹ {{this.price}}</h5>
+              <h5 class="text-center price shop-item-price text-danger">₹ {{this.price}}/KG</h5>
               {{!-- <div class="dropdown show  ">
 
                 <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown"
@@ -71,16 +79,16 @@
                   <li class="dropdown-item">{{this}}</li>
                   {{/each}}
                 </ul>
-                
+
               </div> --}}
-              
+
               {{!-- <select class="form-select form-select-sm" aria-label=".form-select-sm example">
                 <option selected>Size</option>
                 {{#each size}}
                 <option value="{{this}}" {{selected this ../selectedState}}>{{this}}</option>
                 {{/each}}
               </select> --}}
-              
+
               <div>
                 <a href="/add-to-cart/{{this._id}}"
                   class="btn shop-item-button btn-black text-uppercase mt-15 text-center">Add To

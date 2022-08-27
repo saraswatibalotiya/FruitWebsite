@@ -15,7 +15,7 @@
         <div class="container pt-5">
             <div class="card  heading ">
                 <div class="card-body text-center">
-                    <h3 id="new" class="text-center mt-4">All Orders</h3>
+                    <h3 id="new" class="text-center text-light mt-4">All Orders</h3>
                 </div>
             </div>
             {{#if messages.success}}
@@ -31,7 +31,7 @@
                     {{#if orders.length}}
 
                     <div>
-                        <table class="table table-bordered  border-dark table-hover">
+                        <table class="table table-bordered table-dark border-dark table-hover">
                             <thead>
                                 <tr>
                                     <th scope="col">Orders</th>
@@ -54,7 +54,7 @@
                                                 <img src="/images/{{this.item.image}}" height="50px" width="50px"
                                                     alt="{{this.item.image}}">
                                                 {{this.item.name}}&nbsp&nbsp ₹{{this.price}}&nbsp&nbsp
-                                                -{{this.qty}}&nbsp Pcs
+                                                -{{this.qty}}&nbsp KG
                                             </p>
                                         </div>
                                         {{/each}}

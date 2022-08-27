@@ -6,21 +6,21 @@ function productController() {
         async product(req, res) {
             // console.log(products)
             // console.log(req.query.selectpicker);
-            if(req.query.selectpicker == 'men'){
-                const products = await Menproduct.find({ category: ['Men'] })
+            if(req.query.selectpicker == 'Fruits'){
+                const products = await Menproduct.find({ category: ['Fruits'] })
                 return res.render('product', { products: products })
             }
 
-            else if(req.query.selectpicker == 'women'){
-                const products = await Menproduct.find({ category: ['Womens'] })
+            else if(req.query.selectpicker == 'Vegetables'){
+                const products = await Menproduct.find({ category: ['Vegetables'] })
                 return res.render('product', { products: products })
             }
-            else if(req.query.selectpicker == 'kids'){
-                const products = await Menproduct.find({ category: ['Kids'] })
+            else if(req.query.selectpicker == 'sprouts'){
+                const products = await Menproduct.find({ category: ['sprouts'] })
                 return res.render('product', { products: products })
             }
-            else if(req.query.selectpicker == 'wh'){
-                const products = await Menproduct.find({ category: ['Womens Heels'] })
+            else if(req.query.selectpicker == 'seasonal'){
+                const products = await Menproduct.find({ category: ['seasonal'] })
                 return res.render('product', { products: products })
             }
             else if(req.query.selectpicker == 'all'){
@@ -28,7 +28,7 @@ function productController() {
                 return res.render('product', { products: products })
             }
             else{
-                const products = await Menproduct.find({ category: ['Men'] })
+                const products = await Menproduct.find({ category: ['Fruits'] })
                 // const title = 'All'
                 return res.render('product', { products: products })
             }

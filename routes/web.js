@@ -15,6 +15,7 @@ var Product = require('../src/models/menProduct');
 var Cart = require('../src/models/cart');
 
 const { check, validationResult } = require('express-validator');
+const { checkout } = require("./cart");
 
 // const Menproduct = require('../../src/models/menProduct')
 
@@ -37,25 +38,25 @@ function initRoute(app) {
     app.get("/register", authController().register)
 
     app.post("/register", [
-        check('email').isEmail().withMessage('Type Valid Email \n'),
+        check('email').isEmail().withMessage('****Type Valid Email**** \n'),
 
-        check('password').isLength({ min: 4 }).withMessage('Password must be atleast 4 character long \n '),
+        check('password').isLength({ min: 4 }).withMessage('****Password must be atleast 4 character long**** \n '),
 
-        check('name').matches(/^[A-Za-z\s]+$/).withMessage('Name must be alphabetic. \n ')
-            .isLength({ min: 3 }).withMessage(' Name must be atleast 3 character long \n'),
+        check('name').matches(/^[A-Za-z\s]+$/).withMessage('****Name must be alphabetic**** \n ')
+            .isLength({ min: 3 }).withMessage(' ****Name must be atleast 3 character long**** \n'),
 
     ], authController().postRegister)
 
     app.post("/", [
         [
-            check('email').isEmail().withMessage('Type Valid Email \n'),
+            check('email').isEmail().withMessage('****Type Valid Email**** \n'),
 
-            check('queries').isLength({ min: 5 }).withMessage('Message must be atleast 5 character long \n '),
+            check('queries').isLength({ min: 5 }).withMessage('****Message must be atleast 5 character long**** \n '),
 
-            check('address').isLength({ min: 5 }).withMessage('Address must be atleast 5 character long \n '),
+            check('address').isLength({ min: 5 }).withMessage('****Address must be atleast 5 character long**** \n '),
 
-            check('name').matches(/^[A-Za-z\s]+$/).withMessage('Name must be alphabetic. \n ')
-                .isLength({ min: 3 }).withMessage(' Name must be atleast 3 character long \n'),
+            check('name').matches(/^[A-Za-z\s]+$/).withMessage('****Name must be alphabetic**** \n ')
+                .isLength({ min: 3 }).withMessage(' ****Name must be atleast 3 character long**** \n'),
 
 
         ]
@@ -83,17 +84,28 @@ function initRoute(app) {
 
     app.post("/logout", authController().logout)
 
+    //get orders
+    app.get("/orders", (req, res) => {
+        res.render("orders", { key: process.env.KEY_ID });
+      });
+
     //posting user orders
     app.post("/orders", [
-        check('mobile_no').isNumeric().withMessage('Mobile No Should Be Numeric')
-            .isLength({ min: 10 }).withMessage('Mobile No must be atleast 10 character long \n '),
+        check('mobile_no').isNumeric().withMessage('****Mobile No Should Be Numeric****')
+            .isLength({ min: 10 }).withMessage('****Mobile No must be atleast 10 character long**** \n '),
 
-        check('address').isLength({ min: 5 }).withMessage(' Address must be atleast 5 character long \n'),
+        check('address').isLength({ min: 5 }).withMessage(' ****Address must be atleast 5 character long**** \n'),
 
     ], orderController().store)
 
     //getting order details for user
     app.get("/allOrder", orderController().index)
+
+    // app.get("/orders",checkout().options)
+
+    // app.get("/orders", (req, res) => {
+    //     res.render("orders", { key:'rzp_test_yfmR8XKRgrEz0K' });
+    //   });
 
     //-------------------------------------------------ADMIN ROUTES----------------------------------------------------
     app.get('/adminOrders', AdminOrderController().index)

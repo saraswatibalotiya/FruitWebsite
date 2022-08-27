@@ -10,7 +10,7 @@ function contactController(){
             const { name, email,address,queries }   = req.body
             // Validate request 
             if(!name || !email || !address || !queries) {
-                req.flash('error', 'All fields are required')
+                req.flash('error', '****All fields are required****')
                 req.flash('name', name)
                 req.flash('email', email)
                return res.redirect('/#contact')

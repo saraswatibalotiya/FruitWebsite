@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 // create a database
 
-mongoose.connect("mongodb://localhost:27017/fashionfeet",{
+mongoose.connect("mongodb://localhost:27017/saifruit",{
     // useCreateIndex:true,
     useNewUrlParser:true,
     useUnifiedTopology:true,

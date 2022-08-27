@@ -9,40 +9,32 @@
     crossorigin="anonymous"></script>
 
 
-<section class="header" id="header">
-    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm p-3 mb-5 bg-white rounded">
-        <div class="container">
-            <a class="navbar-brand" href="/">Fashion Feet</a>
+<section class="header header_wrapper" id="header">
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm p-3 mb-5 rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Sai Fruits</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fas fa-bars navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto text-center ">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/product">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#contact">Contact</a>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+                <div class="text-center nav-icon">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </div>
+                <div class="text-center nav-icon">
+                    <a class="nav-link active" aria-current="page" href="/product">Products</a>
+                </div>
                 <div class="text-center nav-icon">
                     <a class="fas fa-shopping-bag mx-3 text-center" href="/cart">
                         <span class="badge badge-secondary ">{{session.cart.totalQty}}</span>
                     </a>
                 </div>
-                <div class="text-center text-uppercase">
+                <div class="text-end text-uppercase">
                     {{#if user }}
-                    <div class="dropdown show  ">
+                    <div class="dropdown usernav show ">
                         <a class="btn btn-outline-success  btn-sm dropdown-toggle fas fa-user mx-3 text-center ad ad-name"
                             href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
+                            aria-expanded="false" >
                             {{user.name}}
                         </a>
 
@@ -71,7 +63,8 @@
                     {{!-- <form id="logout" action="/logout" method="POST">
                         <a class="fas fa-sign-out-alt mx-3 text-center"
                             onclick="document.getElementById('logout').submit()" href="#">Logout</a>
-                        <a class="text-center bi bi-card-checklist text-dark mx-3" href="/allOrder">Order History</a>
+                        <a class="text-center bi bi-card-checklist text-dark mx-3" href="/allOrder">Order
+                            History</a>
 
                     </form> --}}
                     {{else}}
@@ -89,5 +82,7 @@
 
 
         </div>
+
+
     </nav>
 </section>

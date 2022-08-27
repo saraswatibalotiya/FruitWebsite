@@ -342,7 +342,7 @@ html, body {
 
 /* ==================================== cart ====================================================== */
 .cart-quantityy{
-    transform: translate(23px, -1px);
+    transform: translate(-300px, -1px);
 
 }
 
